@@ -1,18 +1,33 @@
 #include <iostream>
 #include <gtest/gtest.h>
-#include "../bubble_sort/bubble_sort.h"
+#include "../QuickSort/QuickSort.h"
 
-TEST(Sort, bubble) 
+TEST(QuickSort, NormalVector) 
 {
-  double array[] = { 5, 3, 3.5, 7, 4, 9, 2, -1 };
-  bubble_sort(array, sizeof(array)/sizeof(*array));
-  
-  ASSERT_EQ(array[0], -1);
-  ASSERT_EQ(array[1], 2);
-  ASSERT_EQ(array[2], 3);
-  ASSERT_EQ(array[3], 3.5);
-  ASSERT_EQ(array[4], 4);
-  ASSERT_EQ(array[5], 5);
-  ASSERT_EQ(array[6], 7);
-  ASSERT_EQ(array[7], 9);
+    std::vector<int> vec{5, 1, 3, 2, 4};
+    std::vector<int> sample{1, 2, 3, 4, 5};
+    
+    QuickSort(vec, 0, vec.size()-1);
+    
+    ACCERT_EQ(vec, sample);
+}
+
+TEST(QuickSort, NullVector) 
+{
+    std::vector<int> vec{};
+    std::vector<int> sample{};
+    
+    QuickSort(vec, 0, vec.size()-1);
+    
+    ACCERT_EQ(vec, sample);
+}
+
+TEST(QuickSort, JustOne) 
+{
+    std::vector<int> vec{9, 9, 9, 9, 9, 9, 9, 1};
+    std::vector<int> sample{1, 9, 9, 9, 9, 9, 9, 9;
+    
+    QuickSort(vec, 0, vec.size()-1);
+    
+    ACCERT_EQ(vec, sample);
 }

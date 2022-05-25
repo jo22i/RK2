@@ -7,7 +7,7 @@ project(TestRunning)
 
 add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/third-party/gtest" "gtest")
 
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/bubble_sort)
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/QuickSort)
 
 add_executable(RunTest ${CMAKE_CURRENT_SOURCE_DIR}/tests/test.cpp)
 
@@ -16,6 +16,6 @@ if (COVERAGE)
     target_link_libraries(RunTest PRIVATE --coverage)
 endif()
 
-target_include_directories(RunTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/bubble_sort)
+target_include_directories(RunTest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/QuickSort)
 
-target_link_libraries(RunTest PRIVATE gtest gtest_main gmock_main bubble_sort)
+target_link_libraries(RunTest PRIVATE gtest gtest_main gmock_main QuickSort)
