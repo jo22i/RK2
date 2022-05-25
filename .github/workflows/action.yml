@@ -11,7 +11,7 @@ jobs:
           shell: bash
           run: |
             git submodule update --init
-            cd bubble_sort   
+            cd QuickSort   
             cmake -H. -B_build
             cmake --build _build
           
