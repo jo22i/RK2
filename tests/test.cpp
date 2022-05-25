@@ -9,7 +9,7 @@ TEST(QuickSort, NormalVector)
     
     QuickSort(vec, 0, vec.size()-1);
     
-    ACCERT_EQ(vec, sample);
+    ASSERT_EQ(vec, sample);
 }
 
 TEST(QuickSort, NullVector) 
@@ -19,7 +19,7 @@ TEST(QuickSort, NullVector)
     
     QuickSort(vec, 0, vec.size()-1);
     
-    ACCERT_EQ(vec, sample);
+    ASSERT_EQ(vec, sample);
 }
 
 TEST(QuickSort, JustOne) 
@@ -29,5 +29,5 @@ TEST(QuickSort, JustOne)
     
     QuickSort(vec, 0, vec.size()-1);
     
-    ACCERT_EQ(vec, sample);
+    ASSERT_EQ(vec, sample);
 }
