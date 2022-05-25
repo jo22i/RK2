@@ -25,7 +25,7 @@ TEST(QuickSort, NullVector)
 TEST(QuickSort, JustOne) 
 {
     std::vector<int> vec{9, 9, 9, 9, 9, 9, 9, 1};
-    std::vector<int> sample{1, 9, 9, 9, 9, 9, 9, 9;
+    std::vector<int> sample{1, 9, 9, 9, 9, 9, 9, 9};
     
     QuickSort(vec, 0, vec.size()-1);
     
