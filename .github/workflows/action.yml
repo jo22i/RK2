@@ -15,27 +15,6 @@ jobs:
             cmake -H. -B_build
             cmake --build _build
           
-  Testing:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - name: update
-        run:  |
-          git submodule update --init
-          sudo apt install lcov
-          sudo apt install g++-7
-      - name: test
-        shell: bash
-        run: |
-          mkdir _build && cd _build
-          CXX=/usr/bin/g++-7 cmake -DCOVERAGE=1 ..
-          cmake --build .
-          ./RunTest
-          lcov -t "bubble_sort " -o lcov.info -c -d .
-          lcov --remove lcov.info '/home/runner/work/RK_2/RK_2/third-party/gtest/*' -o lcov.info
-          lcov --remove lcov.info '/usr/include/*' -o lcov.info
-          
   CovTest:
     runs-on: ubuntu-latest
     steps:
