@@ -33,8 +33,8 @@ jobs:
           CXX=/usr/bin/g++-7 cmake -DCOVERAGE=1 ..
           cmake --build .
           ./RunTest
-          lcov -t "bubble_sort" -o lcov.info -c -d .
-          lcov --remove lcov.info '/home/runner/work/RK_2/RK_2/third-party/gtest/*' -o lcov.info
+          lcov -t "QuickSort" -o lcov.info -c -d .
+          lcov --remove lcov.info '/home/runner/work/RK2/RK2/third-party/gtest/*' -o lcov.info
           lcov --remove lcov.info '/usr/include/*' -o lcov.info
   
   CovTest:
@@ -55,8 +55,8 @@ jobs:
           CXX=/usr/bin/g++-7 cmake -DCOVERAGE=1 ..
           cmake --build .
           ./RunTest
-          lcov -t "bubble_sort" -o lcov.info -c -d .
-          lcov --remove lcov.info '/home/runner/work/RK_2/RK_2/third-party/gtest/*' -o lcov.info ###
+          lcov -t "QuickSort" -o lcov.info -c -d .
+          lcov --remove lcov.info '/home/runner/work/RK2/RK2/third-party/gtest/*' -o lcov.info ###
           lcov --remove lcov.info '/usr/include/*' -o lcov.info
           
       - name: CovBeg
