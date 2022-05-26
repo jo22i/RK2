@@ -1,3 +1,6 @@
+[![RK2_test](https://github.com/jo22i/RK2/actions/workflows/actions.yml/badge.svg)](https://github.com/jo22i/RK2/actions/workflows/actions.yml)
+[![Coverage Status](https://coveralls.io/repos/github/jo22i/RK2/badge.svg?branch=master)](https://coveralls.io/github/jo22i/RK2?branch=master)
+
 # Рубежный контроль № 2 по предмету "Технологии и методы программирования"
 
 ## Выполнил: Мельников Егор группа ИУ8-22
